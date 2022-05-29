@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card card-body">
+            <form action="/update/{{client.id}}" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="client_name" value="{{client.client_name}}" placeholder="Client Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="food_name" value="{{client.food_name}}" placeholder="Food name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="price" value="{{client.price}}" placeholder="price">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="amount" value="{{client.amount}}" placeholder="amount">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Update
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
